@@ -1,6 +1,5 @@
 import React from "react";
-import Form from 'react-bootstrap/Form';
-import FormControl from 'react-bootstrap/FormControl';
+import Search from "./Search";
 
 function Navbar() {
     return (
@@ -8,14 +7,10 @@ function Navbar() {
             <header>
                 <h2>Employee Directory</h2>
                 <h5>Click on carrots to filter by heading or use the search box to narrow your results.</h5>
-            </header>
-            <Form inline>
-                <FormControl type="text" placeholder="Search" className="search mr-sm-2" />
-            </Form>
-        </div>
+            </header> 
+            <Search />
+        </div>     
     )
 };
-
-
 
 export default Navbar;
