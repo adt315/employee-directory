@@ -1,3 +1,3 @@
 import React from "react";
 
-// Image, Name, Phone, Email, DOB
+// Image, Name, Phone, Email, Birthday
