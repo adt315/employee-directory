@@ -6,6 +6,14 @@ const employees = [
         phone: "(555)555-5555",
         email: "claire@gmail.com",
         birthday: "1/1/85"
+    },
+    {
+        id: 2,
+        img: "https://image.shutterstock.com/image-photo/happy-businessman-isolated-handsome-man-260nw-609414131.jpg",
+        name: "John Morris",
+        phone: "(123)456-7890",
+        email: "john@gmail.com",
+        birthday: "2/2/80"
     }
 ];
 

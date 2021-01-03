@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
 import User from "./User";
-import employees from "../employees"
+import employees from "../employees";
 
 
 function createUser(employee) {
