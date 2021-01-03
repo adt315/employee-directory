@@ -1,19 +1,26 @@
 import React from "react";
 import Navbar from "./Navbar";
 import User from "./User";
-import employees from "../employees";
+import employees from "../employees"
+
+
+function createUser(employee) {
+  return <User 
+    key={employee.id}
+    img={employee.img}
+    name={employee.name}
+    phone={employee.phone}
+    email={employee.email}
+    birthday={employee.birthday}
+  />
+}
+
 
 function App() {
   return (
     <div>
       <Navbar />
-      <User 
-        img={employees[0].img}
-        name= {employees[0].name}
-        phone= {employees[0].phone}
-        email= {employees[0].email}
-        birthday= {employees[0].birthday}
-      />
+      {employees.map(createUser)}
     </div>
   );
 }
