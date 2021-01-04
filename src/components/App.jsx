@@ -3,6 +3,12 @@ import Navbar from "./Navbar";
 import User from "./User";
 import employees from "../employees";
 
+console.log(employees);
+const [a, b] = employees;
+console.log(a);
+const {id, img, name, phone, email, birthday} = a;
+console.log(img);
+
 
 function createUser(employee) {
   return <User 
