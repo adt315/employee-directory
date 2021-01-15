@@ -4,13 +4,13 @@ function User(props) {
     return (
         <div>
             <img
-                src={props.img}
+                src={props.picture.thumbnail}
                 alt="avatar-img"
             />
-            <p>{props.name}</p>
+            <p>{props.name.first + " " + props.name.last}</p>
             <p>{props.phone}</p>
             <p>{props.email}</p>
-            <p>{props.birthday}</p>
+            <p>{props.dob.date}</p>
         </div>
     );
 }

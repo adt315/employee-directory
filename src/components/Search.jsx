@@ -5,7 +5,7 @@ import FormControl from 'react-bootstrap/FormControl';
 function Search() {
     return (
         <div>
-            <Form inline>
+            <Form inline style={{justifyContent:"center"}}>
                 <FormControl type="text" placeholder="Search" className="search mr-sm-2" />
             </Form>
         </div>
