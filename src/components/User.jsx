@@ -1,18 +1,19 @@
 import React from "react";
 
 function User(props) {
-    return (
-        <div>
-            <img
-                src={props.picture.thumbnail}
-                alt="avatar-img"
-            />
-            <p>{props.name.first + " " + props.name.last}</p>
-            <p>{props.phone}</p>
-            <p>{props.email}</p>
-            <p>{props.dob.date}</p>
-        </div>
-    );
+  return (
+    <tbody>
+      <tr>
+        <td className="align-middle">
+          <img src={props.picture.thumbnail} alt="avatar-img" />
+        </td>
+        <td>{props.name.first + " " + props.name.last}</td>
+        <td>{props.phone}</td>
+        <td>{props.email}</td>
+        <td>{props.dob.date}</td>
+      </tr>
+    </tbody>
+  );
 }
 
 export default User;

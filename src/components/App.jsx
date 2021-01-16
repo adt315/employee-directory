@@ -1,33 +1,29 @@
 import React from "react";
 import Navbar from "./Navbar";
 import User from "./User";
-import employees from "../employees";
 import { Component } from "react";
 import axios from "axios"
 import Search from "./Search";
 
 
-// // this might need to go in data.jsx
-// console.log(employees);
-// const [a, b] = employees;
-// console.log(a);
-// const {id, img, name, phone, email, birthday} = a;
-// console.log(img);
-
-
-function createUser(employee) {
-  return <User 
-    key={employee.id}
-    img={employee.img}
-    name={employee.name}
-    phone={employee.phone}
-    email={employee.email}
-    birthday={employee.birthday}
-  />
-}
 
 class App extends Component {
-  state = {employees:[]}
+  state = {
+    employees:[],
+    filteredUsers:[{}],
+  }
+
+  handleSearchChange = event => {
+    console.log(event.target.value)
+    var filter = event.target.value
+    var filteredList = this.state.employees.filter(item => {
+      var values = Object.values(item).join("").toLowerCase()
+      return values.indexOf(filter.toLowerCase()) !== -1
+    })
+    this.setState({
+      filteredUsers: filteredList
+    })
+  }
 
   componentDidMount(){
     axios.get("https://randomuser.me/api/?results=200").then(response => {
@@ -44,8 +40,9 @@ class App extends Component {
     return (
     <div>
       <Navbar />
-      <Search />
+      <Search handleSearchChange={this.handleSearchChange}/>
       {this.state.employees.map(employee => <User {...employee}/>)}
+      {/* <User employees={this.state.filteredUsers}/> */}
     </div>
   );}
 }
