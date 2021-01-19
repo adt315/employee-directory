@@ -4,6 +4,7 @@ import User from "./User";
 import { Component } from "react";
 import axios from "axios"
 import Search from "./Search";
+import Headings from "./Headings";
 
 
 
@@ -41,6 +42,7 @@ class App extends Component {
     <div>
       <Navbar />
       <Search handleSearchChange={this.handleSearchChange}/>
+      <Headings />
       {this.state.employees.map(employee => <User {...employee}/>)}
       {/* <User employees={this.state.filteredUsers}/> */}
     </div>

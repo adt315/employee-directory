@@ -28,3 +28,15 @@ header h5 {
     font-weight: 100;
     font-size: 12px;
 }
+
+.flex-container {
+    height: 75px;
+    width: 300px;
+    align-items: right;
+  }
+
+.heading {
+    font-weight: bold;
+}
+
+
