@@ -7,7 +7,6 @@ import Search from "./Search";
 import Headings from "./Headings";
 
 
-
 class App extends Component {
   state = {
     employees:[],

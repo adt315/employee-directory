@@ -39,4 +39,8 @@ header h5 {
     font-weight: bold;
 }
 
+table, th, td {
+    border-top: 0.5px solid black;
+    border-bottom: 0.5px solid black;
+  }
 
