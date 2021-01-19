@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    background: #eee;
+    font-family: "Montserrat", sans-serif;
+}
+  
+header {
+    background-color: rgb(2, 2, 63);
+    margin: auto -16px;
+    padding: 16px 32px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+  
+header h2 {
+    color: #fff;
+    text-align: center;
+    font-weight: 200;
+}
+
+header h5 {
+    color: #fff;
+    text-align: center;
+    font-weight: 100;
+    font-size: 12px;
+}
+
+.flex-container {
+    height: 75px;
+    width: 300px;
+    align-items: right;
+  }
+
+.heading {
+    font-weight: bold;
+}
+
+table, th, td {
+    border-top: 0.5px solid black;
+    border-bottom: 0.5px solid black;
+  }
+
